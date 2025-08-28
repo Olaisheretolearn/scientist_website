@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Black STEM Network</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/Physics2DPlugin.min.js"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<section class="start">
+  <nav>
+    <div class="logo">
+      <div class="logo1">
+        <a href=""><img src="images/logo-black.png" alt=""></a>
+      </div>
+      <div class="logo2">
+        <a href=""><img src="images/cbsn-black.png" alt=""></a>
+      </div>
+    </div>
+
+    <div class="nav-links" id="site-menu">
+      <a href="#">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Executive</a>
+      <a href="#">News</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Blog</a>
+    </div>
+
+   
+    <button class="hamburger" aria-label="Open menu" aria-controls="site-menu" aria-expanded="false">
+      <span class="hamburger-bar"></span>
+    </button>
+  </nav>
+
+  
+  <div class="nav-overlay" hidden></div>
+
+  <div class="header-container">
+    <div class="big-text"><span>Uwinnipeg</span> <br>BLACK<br>STEM<br>NETWORK</div>
+        <div class="tag computer-science">computer science</div>
+    <div class="tag biology">Biology</div>
+    <div class="tag chemistry">Chemistry</div>
+    <div class="tag physics">Physics</div>
+    <div class="tag mathematics">Mathematics</div>
+    <div class="tag statistics">Statistics</div>
+    <div class="tag psychology">Psychology</div>
+    <div class="tag biochemistry">Biochemistry</div>
+    <div class="tag neuroscience">Neuroscience</div>
+    <div class="tag kinesiology">Kinesiology</div>
+    <div class="tag geography">Geography</div>
+    <div class="tag environmental">Environmental Studies</div>
+  </div>
+</section>
+
+
+  <section class="recent-updates">
+  <h2 class="recent-updates-title">Recent Updates</h2>
+  <hr>
+
+  <div class="updates-grid">
+    <div class="update-card">
+      <img src="images/first-year.png" alt="First Year Guide">
+      <h3>First year Guide</h3>
+      <p>
+        Welcome to your first year! As a society, we rely on those who choose
+        to study science—people like you—to expand knowledge and improve
+        the quality of life for everyone.
+      </p>
+      <a href="#">Read More ></a>
+    </div>
+
+    <div class="update-card">
+      <img src="images/first-year2.png" alt="Roll Call">
+      <h3>Roll Call</h3>
+      <p>
+        Catch us on Roll Call: your spot to grab merch, connect with our reps,
+        and discover opportunities to get involved.
+      </p>
+      <a href="#">Read More ></a>
+    </div>
+
+    <div class="update-card">
+      <img src="images/first-year3.png" alt="Resume Build Workshop">
+      <h3>Resume Build Workshop</h3>
+      <p>
+        Join our Resume Workshop—a hands-on session to sharpen your CV,
+        highlight your skills, and stand out in applications.
+      </p>
+      <a href="#">Read More ></a>
+    </div>
+
+    <div class="update-card">
+      <img src="images/first-year4.png" alt="Battle of the Faculties">
+      <h3>Battle of the Faculties</h3>
+      <p>
+        Tentatively set for September 12 in partnership with the Game Society:
+        this high-energy event will pit faculties against each other in a series
+        of fast-paced challenges.
+      </p>
+      <a href="#">Read More ></a>
+    </div>
+  </div>
+</section>
+
+
+<section class="paper">
+  <div class="paper-wrap">
+ 
+    <div class="paper-copy">
+      <p class="paper-eyebrow">Featured Research papers</p>
+      <h3 class="paper-title">
+        THE DEVELOPMENT OF MACHINE LEARNING MODELS TO PREDICT PEA CROP YIELD
+        USING BOTH ABOVE AND BELOW GROUND INFORMATION.
+      </h3>
+      <p class="paper-desc">
+        In this edition, we are featuring Faith Akinyemi’s groundbreaking work
+        on the development of machine learning models to predict crop yield using
+        both above- and below-ground information. Her research blends agriculture
+        and AI, offering new insights into how data-driven tools can support food
+        security and sustainable farming practices.
+      </p>
+      <a class="paper-link" href="#">Read more  >>>></a>
+    </div>
+
+    
+    <figure class="paper-media">
+      <img src="images/pea.jpg" alt="Pea crop research image" loading="lazy" />
+      <figcaption class="paper-bubble">
+        Integrating above- and below-ground phenotypic features can accelerate
+        models significantly, improving yield estimation accuracy.
+      </figcaption>
+
+
+      <div class="paper-credit">
+        <strong>Applied Computer Science</strong><br>
+        <span>uwinnipeg.ca/machine-learning-models</span>
+      </div>
+    </figure>
+  </div>
+</section>
+
+
+  
+  
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  (function () {
+    const btn = document.querySelector('.hamburger');
+    const menu = document.getElementById('site-menu');
+    const overlay = document.querySelector('.nav-overlay');
+
+    function openMenu() {
+      menu.classList.add('open');
+      btn.classList.add('is-open');
+      btn.setAttribute('aria-expanded', 'true');
+      overlay.hidden = false;
+      // trap focus start
+      setTimeout(() => menu.querySelector('a')?.focus(), 0);
+      document.addEventListener('keydown', onKeydown);
+    }
+
+    function closeMenu() {
+      menu.classList.remove('open');
+      btn.classList.remove('is-open');
+      btn.setAttribute('aria-expanded', 'false');
+      overlay.hidden = true;
+      document.removeEventListener('keydown', onKeydown);
+    }
+
+    function toggleMenu() {
+      const isOpen = menu.classList.contains('open');
+      isOpen ? closeMenu() : openMenu();
+    }
+
+    function onKeydown(e) {
+      if (e.key === 'Escape') closeMenu();
+    }
+
+    btn.addEventListener('click', toggleMenu);
+    overlay.addEventListener('click', closeMenu);
+
+    // Close when a nav link is clicked
+    menu.addEventListener('click', (e) => {
+      const target = e.target;
+      if (target.matches('a')) closeMenu();
+    });
+  })();
+</script>
+
+</html>
