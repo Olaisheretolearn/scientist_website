@@ -777,7 +777,7 @@ body {
 
 @media (max-width: 768px) {
   .big-text {
-    font-size: 70px;
+    font-size: 80px;
   }
   
   .nav-links {
@@ -939,6 +939,245 @@ nav {
     /* no special layout needed since drawer is fixed & off-canvas */
   }
 }
+
+/* === Executives Section (add to style.css) === */
+.executives {
+  background:#fff;
+  color:#000;
+  padding: 40px 24px;
+  padding-left: -200px;
+}
+.exec-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.exec-header {
+  display: grid;
+  gap: 8px;
+  margin: 0 0 18px;
+}
+.exec-title {
+  font-family: "Golf Display", sans-serif;   /* bold display */
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: .2px;
+  text-transform: uppercase;
+}
+.exec-intro {
+  font-family: "Darker Grotesque", sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  max-width: 72ch;
+}
+
+/* Grid */
+.exec-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+/* Card */
+.exec-card {
+  background:#f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.exec-card:focus-within,
+.exec-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+}
+.exec-media {
+  margin:0;
+  aspect-ratio: 1 / 1;         /* perfect square */
+  overflow:hidden;
+  background:#eaeaea;
+}
+.exec-media img {
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  display:block;
+}
+.exec-name {
+  font-family: "Golf Display", sans-serif;   /* bold name */
+  font-size: 22px;
+  line-height: 1;
+  margin: 10px 12px 4px;
+  text-transform: none;
+}
+.exec-role {
+  font-family: "Darker Grotesque", sans-serif;  /* role text */
+  font-size: 14px;
+  line-height: 1.1;
+  margin: 0 12px 12px;
+  color: #333;
+  text-transform: uppercase;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .exec-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+  .executives { padding: 28px 16px; }
+  .exec-title { font-size: 22px; }
+  .exec-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .exec-name { font-size: 18px; }
+}
+@media (max-width: 480px) {
+  .exec-grid { grid-template-columns: 1fr; }
+}
+
+
+/* === Palette (add near :root) === */
+:root{
+  --bsn-light: #ffa9ef;
+  --bsn-dark: #231f2c;
+}
+
+/* === Featured CTA strip === */
+.feature-cta{
+  position: relative;
+  background: var(--bsn-light);
+  color: #000;
+  padding: 56px 16px 48px;
+  text-align: center;
+  overflow: clip;
+}
+.feature-bg{
+  position: absolute;
+  inset: -140px 0 auto 0;            /* top band with dots */
+  height: 260px;
+  background:
+    radial-gradient(circle, rgba(0,0,0,.18) 1px, transparent 1.5px) 0 0/22px 22px,
+    #fff;
+  opacity: .55;
+}
+.feature-inner{
+  max-width: 920px;
+  margin: 0 auto;
+  position: relative;
+}
+.feature-title{
+  font-family: "Golf Display", sans-serif;
+  font-size: clamp(28px, 4.5vw, 52px);
+  letter-spacing: .5px;
+  line-height: 1;
+  text-transform: uppercase;
+  margin: 6px 0 10px;
+}
+.feature-copy{
+  font-family: "Darker Grotesque", sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  max-width: 70ch;
+  margin: 0 auto 16px;
+}
+.feature-email{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Darker Grotesque", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #000;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.75);
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.feature-email:hover{ transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0,0,0,.12); }
+.mail-icon{ font-size: 18px; }
+
+/* === Footer === */
+.site-footer{
+  background: var(--bsn-dark);
+  color: #fff;
+  padding: 40px 20px 48px;
+}
+.footer-wrap{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+.brand-block{
+  display: flex;
+  align-items: flex-end;
+  gap: 18px;
+}
+.brand-mark{
+  line-height: .9;
+}
+.brand-mark strong,
+.brand-mark em{ 
+  font-family: "Golf Display", sans-serif;
+  font-size: clamp(22px, 3.2vw, 34px);
+  display: block;
+  font-style: normal;
+}
+.brand-mark span{
+  font-family: "Golf Display", sans-serif;
+  font-size: clamp(34px, 5vw, 56px);
+}
+.allpass{ width: 84px; height: auto; opacity: .95; }
+
+.footer-head{
+  font-family: "Golf Display", sans-serif;
+  font-size: 16px;
+  letter-spacing: .3px;
+  margin: 2px 0 8px;
+}
+.footer-nav ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 6px;
+}
+.footer-nav a{
+  font-family: "Darker Grotesque", sans-serif;
+  font-size: 15px;
+  color: #fff;
+  text-decoration: none;
+  opacity: .9;
+}
+.footer-nav a:hover{ text-decoration: underline; }
+
+.footer-social .socials{
+  display: flex;
+  gap: 10px;
+}
+.footer-social a{
+  width: 34px; height: 34px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: #2c2736;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: transform .15s ease, background .2s ease;
+}
+.footer-social a:hover{ transform: translateY(-2px); background:#3a3246; }
+
+/* === Responsive === */
+@media (max-width: 900px){
+  .footer-wrap{ grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px){
+  .feature-cta{ padding: 44px 14px 40px; }
+  .footer-wrap{ grid-template-columns: 1fr; gap: 22px; }
+  .brand-block{ justify-content: space-between; }
+}
+
+
 
 
 
