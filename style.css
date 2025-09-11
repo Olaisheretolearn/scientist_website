@@ -660,7 +660,7 @@ body {
 
 @media (max-width: 768px) {
   .big-text {
-    font-size: 60px;
+    font-size: 50px;
   }
 
   .big-text span{
@@ -756,7 +756,7 @@ body {
   }
   
   .big-text {
-    font-size: 80px;
+    font-size: 50px;
   }
   
   .tag {
@@ -777,7 +777,7 @@ body {
 
 @media (max-width: 768px) {
   .big-text {
-    font-size: 80px;
+    font-size: 75px;
   }
   
   .nav-links {
