@@ -1,0 +1,186 @@
+:root{
+  --bsn-light:#ffa9ef;
+  --bsn-dark:#231f2c;
+  --ink:#0b0b0b;
+  --paper:#ffffff;
+  --muted:#666;
+  --rule:#d7d7d7;
+  --green:#19b24a;
+}
+
+html,body{height:100%}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:#000;
+  color:#fff;
+  font-family:"Nunito", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+
+
+/* Nav */
+.site-nav{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:18px 20px; position:relative; z-index:10;
+}
+.logo{display:flex; align-items:center; gap:10px}
+.logo img{height:44px}
+.nav-links{display:flex; gap:26px}
+.nav-links a{color:#fff; text-decoration:none; font-size:16px; opacity:.85}
+.nav-links a.is-active{opacity:1; font-weight:800}
+.hamburger{display:none; background:none; border:0; width:44px; height:44px; cursor:pointer; position:relative}
+.hamburger-bar, .hamburger-bar::before, .hamburger-bar::after{
+  content:""; position:absolute; left:10px; right:10px; height:2px; background:#fff;
+  transition:transform .25s ease, opacity .2s ease, top .25s ease;
+}
+.hamburger-bar{top:50%; transform:translateY(-50%)}
+.hamburger-bar::before{top:-10px}
+.hamburger-bar::after{top:10px}
+.hamburger.is-open .hamburger-bar{opacity:0}
+.hamburger.is-open .hamburger-bar::before{top:0; transform:rotate(45deg)}
+.hamburger.is-open .hamburger-bar::after{top:0; transform:rotate(-45deg)}
+.nav-overlay{position:fixed; inset:0; background:rgba(0,0,0,.45); display:block; opacity:0; pointer-events:none; z-index:9}
+.nav-overlay.show{opacity:1; pointer-events:auto}
+
+/* Hero */
+.events-hero{
+  position:relative; padding:72px 20px 88px; background:#000; border-bottom:1px solid #1d1d1d;
+}
+.hero-inner{max-width:1200px; margin:0 auto; min-height:220px; display:grid; place-items:center; text-align:center}
+.hero-title{
+  font-family:"Golf Display","League Spartan",system-ui;
+  font-weight:800; line-height:.88; letter-spacing:-.5px;
+  margin:6px 0 0; font-size:clamp(48px,9vw,112px);
+}
+.hero-sub{margin:.35rem 0 0; color:#d8d8d8; font-size:14px}
+
+/* Page container */
+.events-wrap{
+  background:#fff; color:#000;
+  border-radius:16px 16px 0 0;
+  max-width:100%; margin:0 auto; padding:38px 20px 80px;
+}
+.page-h2{
+  font-family:"Golf Display","League Spartan",system-ui;
+  font-size:clamp(28px,4.5vw,40px);
+  margin:0 0 28px 0;
+}
+
+/* Month header with rule */
+.month{margin: 22px 0 48px}
+.month-head{
+  display:grid; grid-template-columns:auto 1fr; align-items:center; gap:22px; margin-bottom:18px;
+}
+.month-name{
+  margin:0;
+  font-family:"Nunito", system-ui;
+  font-weight:800;
+  font-size:22px;
+}
+.month-rule{height:1px; background:var(--rule);}
+
+/* Event card (text-first layout) */
+.event{padding:18px 0 10px}
+.event + .event{border-top:1px solid #eee; margin-top:18px}
+.event-meta{display:flex; align-items:center; gap:10px; margin-bottom:6px}
+.event-day{
+  font-family:"Darker Grotesque","Nunito",system-ui;
+  font-size:18px; color:#111;
+}
+.badge{
+  font-family:"Nunito",system-ui;
+  font-size:12px; padding:2px 8px; border-radius:6px;
+  border:1.5px solid currentColor; line-height:1; display:inline-block;
+}
+.badge-event{ color:var(--green); background:#f5fff8; }
+
+.event-title{
+  margin:.15rem 0 .35rem;
+  font-family:"Golf Display","League Spartan",system-ui;
+  font-size: clamp(20px, 3.8vw, 28px);
+  line-height:1;
+}
+.event-mode{ margin:0 0 .45rem; color:#333; }
+.event-body{
+  margin:0;
+  font-size:16px; line-height:1.6; color:#222;
+}
+
+/* Footer (lite) */
+.site-footer{ background: var(--bsn-dark); color:#fff; padding: 34px 18px 44px; }
+.footer-wrap{
+  max-width:1200px; margin:0 auto;
+  display:flex; align-items:center; justify-content:space-between; gap:18px; flex-wrap:wrap;
+}
+.brand-mark{ font-family:"Golf Display"; font-size:22px; line-height:.95; }
+.footer-nav ul{ list-style:none; padding:0; margin:.25rem 0 0; }
+.footer-nav a{ color:#fff; text-decoration:none; opacity:.9; }
+.footer-social .socials{ display:flex; gap:10px; }
+.footer-social a{
+  width:34px; height:34px; display:grid; place-items:center; text-decoration:none;
+  border-radius:50%; background:#2c2736; color:#fff;
+}
+
+/* Responsive */
+@media (max-width: 768px){
+  .hamburger{display:inline-block; z-index:12}
+  .nav-links{
+    position:fixed; top:0; right:-100%;
+    height:100vh; width:76%; max-width:340px;
+    background:#000; color:#fff;
+    display:flex; flex-direction:column; gap:14px;
+    padding:80px 20px 20px; transition:right .3s ease; z-index:11;
+  }
+  .nav-links.open{ right:0; }
+  .nav-links a{ font-size:18px; padding:10px 4px; }
+}
+
+/* Pills */
+.pill{
+  position:absolute;
+  padding:8px 14px;
+  border-radius:999px;
+  font-weight:800;
+  font-size:13px;
+  color:#111;
+  background:#eee;
+  box-shadow:0 10px 28px rgba(0,0,0,.25);
+  white-space:nowrap;
+  opacity:0;
+  transform:translateY(-120px);
+  font-family:"Darker Grotesque", system-ui, sans-serif;
+  user-select:none;
+}
+/* anchor for absolute pills */
+.hero-inner{ position: relative; }
+
+/* the pills */
+.pill{
+  position:absolute;
+  padding:8px 14px;
+  border-radius:999px;
+  font-weight:800;
+  font-size:13px;
+  color:#111;
+  background:#eee;
+  box-shadow:0 10px 28px rgba(0,0,0,.25);
+  white-space:nowrap;
+  opacity:0;                 /* JS will set to 1 */
+  transform:translateY(-120px);
+  font-family:"Darker Grotesque", system-ui, sans-serif;
+  user-select:none;
+  pointer-events:none;       /* don’t block taps */
+  z-index:1;                 /* behind the title */
+}
+.hero-title,.hero-sub{ position:relative; z-index:2; }
+
+/* colors ONLY (no top/left here) */
+.pill[data-color="mint"]{ background:#a8e6e2; top: 20%; left: 70%;}
+.pill[data-color="violet"]{ background:#d9c9f1; top:10% }
+.pill[data-color="peach"]{ background:#ffdab9; top:5% ; left:15% }
+.pill[data-color="sand"]{ background:#ffe4b5; top : 45%; left:2%}
+.pill[data-color="petal"]{ background:#ffcccb; top : 45%; left:2%}
+.pill[data-color="sky"]{ background:#87cefa; top : 45%; left:2%}
+.pill[data-color="sage"]{ background:#98fb98;  left : 22%}
+.pill[data-color="thistle"]{ background:#d8bfd8; }

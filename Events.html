@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Black STEM Network — Events</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Darker+Grotesque:wght@300..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400..900&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+  <!-- Gulfs Display -->
+  <style>
+    @font-face{
+      font-family:"Golf Display";
+      src:url("font/gulfs-display-normal.ttf") format("truetype");
+      font-weight:800; font-style:normal; font-display:swap;
+    }
+  </style>
+
+  <link rel="stylesheet" href="events.css" />
+</head>
+<body>
+  <!-- Nav -->
+  <nav class="site-nav">
+    <div class="logo">
+      <a href="/"><img src="images/logo-black.png" alt="Black STEM Network"></a>
+      <a href="https://blackscientists.ca/"><img src="images/cbsn-black.png" alt="CBSN"></a>
+    </div>
+
+    <div class="nav-links" id="site-menu">
+      <a href="/">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="#executive">Executive</a>
+      <a class="is-active" href="#">Events</a>
+      <a href="#contact">Contact Us</a>
+      <a href="#blog">Blog</a>
+    </div>
+
+    <button class="hamburger" aria-label="Open menu" aria-controls="site-menu" aria-expanded="false">
+      <span class="hamburger-bar"></span>
+    </button>
+  </nav>
+  <div class="nav-overlay" hidden></div>
+
+  <!-- Hero / Banner -->
+  <header class="events-hero">
+    <div class="hero-inner">
+      <h1 class="hero-title">Events</h1>
+      <p class="hero-sub">loads of events this semester, see you at every one of them right?? right?? right???👀</p>
+      <span class="pill" data-color="sky">mathematics</span>
+      <span class="pill" data-color="peach">statistics</span>
+      <span class="pill" data-color="thistle">psychology</span>
+      <span class="pill" data-color="mint">biochemistry</span>
+      <span class="pill" data-color="violet">neuroscience</span>
+      <span class="pill" data-color="sage">kinesiology</span>
+    
+    
+    </div>
+  </header>
+
+  <main class="events-wrap">
+    <h2 class="page-h2">Upcoming Events</h2>
+
+    <!-- Month group -->
+    <section class="month">
+      <div class="month-head">
+        <h3 class="month-name">September 2025</h3>
+        <div class="month-rule" aria-hidden="true"></div>
+      </div>
+
+      <!-- One event -->
+      <article class="event">
+        <div class="event-meta">
+          <span class="event-day">Saturday 17</span>
+          <span class="badge badge-event">Event</span>
+        </div>
+
+        <h4 class="event-title">First Year guide</h4>
+        <p class="event-mode"><em>In-Person</em></p>
+
+        <p class="event-body">
+          So you got accepted… congrats 🎉 <br>
+Now what? Classes, profs, timetables, trying to find where the heck “3L04” even is, 
+and pretending you totally aren’t lost in Centennial Hall for the 5th time this week. <br> 
+Our First Year Guide is your cheat-sheet to surviving (and actually enjoying) your first semester. We’ll cover the basics (like how not to starve on cafeteria fries alone) <br> and the bigger stuff (study hacks, finding your people, and why joining a student society isn’t just free pizza — although, yes, there’s pizza 🍕).
+It’s part survival manual, part inside-jokes, and all the stuff we wish someone had told us on day one. By the end, you’ll be walking around like a pro — or at least like someone who knows which staircases don’t lead to a dead end.
+        </p>
+      </article>
+    </section>
+
+    <!-- Duplicate this block for more months -->
+   <!-- Month group -->
+    <section class="month">
+      <div class="month-head">
+        <h3 class="month-name">October  2025</h3>
+        <div class="month-rule" aria-hidden="true"></div>
+      </div>
+
+      <!-- One event -->
+      <article class="event">
+        <div class="event-meta">
+          <span class="event-day">Saturday 17</span>
+          <span class="badge badge-event">Event</span>
+        </div>
+
+        <h4 class="event-title">May Professional Development Workshop</h4>
+        <p class="event-mode"><em>In-Person</em></p>
+
+        <p class="event-body">
+       “Oh… I have no job experience, what do I even put in my resume?” <br>
+We hear that all the time. And that’s exactly why we’re hosting this workshop 👩🏾‍💻👨🏽‍💼. <br>
+Turns out, you don’t need a fancy internship at GenomeCanada to have a solid CV. Your projects, classwork, group assignments, volunteer gigs, club involvement, even that time you organized study sessions for your friends —  they all count (and we’ll show you how to make them sparkle ✨). <br>
+At our Resume Build Workshop, we’ll walk you through how to spin your experiences into recruiter-friendly bullet points,  <br> what sections to include when you feel like you’ve got “nothing,” and the small formatting hacks that make a huge difference.
+Bring your laptop, a draft (even if it’s just your name at the top), and we’ll help you leave with something that actually screams: “Hire me, I’ve got potential.”
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-wrap">
+      <div class="brand-mark"><strong>BLACK</strong><br><span>STEM</span><br><em>NETWORK</em></div>
+      <nav class="footer-nav" aria-label="Work with us">
+        <h3 class="footer-head">Work with us</h3>
+        <ul>
+          <li><a href="#">Pitch an Idea</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Volunteer</a></li>
+        </ul>
+      </nav>
+      <div class="footer-social">
+        <h3 class="footer-head">Follow us on</h3>
+        <div class="socials">
+          <a href="#" aria-label="TikTok">🎵</a>
+          <a href="#" aria-label="Instagram">📷</a>
+          <a href="#" aria-label="X / Twitter">✕</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Minimal JS: mobile drawer -->
+  <script>
+    (function () {
+      const btn = document.querySelector('.hamburger');
+      const menu = document.getElementById('site-menu');
+      const overlay = document.querySelector('.nav-overlay');
+
+      function openMenu() {
+        menu.classList.add('open');
+        btn.classList.add('is-open');
+        btn.setAttribute('aria-expanded', 'true');
+        overlay.hidden = false;
+        overlay.classList.add('show');      
+        setTimeout(() => menu.querySelector('a')?.focus(), 0);
+        document.addEventListener('keydown', onKeydown);
+      }
+      function closeMenu() {
+        menu.classList.remove('open');
+        btn.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', 'false');
+        overlay.classList.remove('show');
+        overlay.hidden = true;
+        document.removeEventListener('keydown', onKeydown);
+      }
+      function toggleMenu(){ menu.classList.contains('open') ? closeMenu() : openMenu(); }
+      function onKeydown(e){ if(e.key === 'Escape') closeMenu(); }
+
+      btn.addEventListener('click', toggleMenu);
+      overlay.addEventListener('click', closeMenu);
+      menu.addEventListener('click', (e)=>{ if(e.target.matches('a')) closeMenu(); });
+
+      // Pills animation — random gentle float
+      const pills = gsap.utils.toArray('.pill');
+      const bounds = document.querySelector('.hero-inner');
+      function rand(min, max){ return Math.random() * (max - min) + min; }
+
+      pills.forEach(p => {
+        // random start position inside header
+        const bb = bounds.getBoundingClientRect();
+        const x = rand(16, bb.width - 10);
+        const y = rand(10, bb.height - 0);
+        gsap.set(p, { x, y, opacity: 1, rotation: rand(-8, 8) });
+
+        gsap.to(p, {
+          duration: rand(6, 11),
+          x: `+=${rand(-30, 30)}`,
+          y: `+=${rand(-20, 20)}`,
+          rotation: `+=${rand(-8, 8)}`,
+          repeat: -1,
+          yoyo: true,
+          ease: 'sine.inOut'
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
